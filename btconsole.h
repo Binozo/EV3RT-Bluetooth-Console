@@ -16,7 +16,12 @@ bool ev3_bt_connected();
 bool ev3_bt_console_connected();
 
 /**
- * \brief 	     Sends a message to the ev3 console mobile app
+ * \brief 	     Sends a message to the ev3 console mobile app \n Warning! If you send a message containing "!" the Client will disconnect!
  * \returns      true if sending successful
  */
 bool ev3_bt_console_send_message(const char *message);
+
+/**
+ * \brief 	     Receives a message from the client
+ */
+void ev3_bt_console_receive_message(char *buffer);
