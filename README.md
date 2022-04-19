@@ -32,6 +32,7 @@ A EV3RT Bluetooth library which handles all the communication with the Mobile Ap
 - Sends a message to the Mobile App
 - Example: `ev3_bt_console_send_message("Hello World")`
 - Caution: Sending a message containing "!" results in a disconnect from the mobile app
+- Caution: You have to send `\r` at the end of every message
 - Returns true if successful
 
 ## `ev3_bt_console_receive_message(char *buffer)`
